@@ -1,0 +1,126 @@
+Added Component: Designator=J1(SOLDER_JUMP)
+Added Component: Designator=J2(SOLDER_JUMP)
+Added Component: Designator=J3(SOLDER_JUMP)
+Added Component: Designator=J4(SOLDER_JUMP)
+Added Component: Designator=J5(SOLDER_JUMP)
+Added Component: Designator=J6(SOLDER_JUMP)
+Added Component: Designator=J7(SOLDER_JUMP)
+Added Component: Designator=J8(SOLDER_JUMP)
+Added Component: Designator=J9(SOLDER_JUMP)
+Added Component: Designator=J10(SOLDER_JUMP)
+Added Component: Designator=K1(rj45)
+Added Component: Designator=K2(rj45)
+Added Component: Designator=K3(rj45)
+Added Component: Designator=K4(rj45)
+Added Component: Designator=K5(rj45)
+Added Component: Designator=P1(HDR1X8)
+Added Component: Designator=P2(HDR1X5)
+Added Component: Designator=R1(0603R-GENERIC)
+Added Component: Designator=U1(FP-S8-5-MFG)
+Added Pin To Net: NetName=A Pin=K1-4
+Added Pin To Net: NetName=A Pin=K2-4
+Added Pin To Net: NetName=A Pin=K3-4
+Added Pin To Net: NetName=A Pin=K4-4
+Added Pin To Net: NetName=A Pin=K5-4
+Added Pin To Net: NetName=A Pin=P1-4
+Added Pin To Net: NetName=A Pin=R1-2
+Added Pin To Net: NetName=A Pin=U1-6
+Added Net: Name=A
+Added Pin To Net: NetName=B Pin=K1-5
+Added Pin To Net: NetName=B Pin=K2-5
+Added Pin To Net: NetName=B Pin=K3-5
+Added Pin To Net: NetName=B Pin=K4-5
+Added Pin To Net: NetName=B Pin=K5-5
+Added Pin To Net: NetName=B Pin=P1-5
+Added Pin To Net: NetName=B Pin=R1-1
+Added Pin To Net: NetName=B Pin=U1-7
+Added Net: Name=B
+Added Pin To Net: NetName=DIR Pin=P2-3
+Added Pin To Net: NetName=DIR Pin=U1-2
+Added Pin To Net: NetName=DIR Pin=U1-3
+Added Net: Name=DIR
+Added Pin To Net: NetName=NetJ1_1 Pin=J1-1
+Added Pin To Net: NetName=NetJ1_1 Pin=J3-1
+Added Pin To Net: NetName=NetJ1_1 Pin=J5-1
+Added Pin To Net: NetName=NetJ1_1 Pin=J7-1
+Added Pin To Net: NetName=NetJ1_1 Pin=J9-1
+Added Net: Name=NetJ1_1
+Added Pin To Net: NetName=NetJ1_2 Pin=J1-2
+Added Pin To Net: NetName=NetJ1_2 Pin=K5-3
+Added Pin To Net: NetName=NetJ1_2 Pin=P1-3
+Added Net: Name=NetJ1_2
+Added Pin To Net: NetName=NetJ2_1 Pin=J2-1
+Added Pin To Net: NetName=NetJ2_1 Pin=J4-1
+Added Pin To Net: NetName=NetJ2_1 Pin=J6-1
+Added Pin To Net: NetName=NetJ2_1 Pin=J8-1
+Added Pin To Net: NetName=NetJ2_1 Pin=J10-1
+Added Net: Name=NetJ2_1
+Added Pin To Net: NetName=NetJ2_2 Pin=J2-2
+Added Pin To Net: NetName=NetJ2_2 Pin=K5-6
+Added Pin To Net: NetName=NetJ2_2 Pin=P1-6
+Added Net: Name=NetJ2_2
+Added Pin To Net: NetName=NetJ3_2 Pin=J3-2
+Added Pin To Net: NetName=NetJ3_2 Pin=K1-3
+Added Net: Name=NetJ3_2
+Added Pin To Net: NetName=NetJ4_2 Pin=J4-2
+Added Pin To Net: NetName=NetJ4_2 Pin=K1-6
+Added Net: Name=NetJ4_2
+Added Pin To Net: NetName=NetJ5_2 Pin=J5-2
+Added Pin To Net: NetName=NetJ5_2 Pin=K2-3
+Added Net: Name=NetJ5_2
+Added Pin To Net: NetName=NetJ6_2 Pin=J6-2
+Added Pin To Net: NetName=NetJ6_2 Pin=K2-6
+Added Net: Name=NetJ6_2
+Added Pin To Net: NetName=NetJ7_2 Pin=J7-2
+Added Pin To Net: NetName=NetJ7_2 Pin=K3-3
+Added Net: Name=NetJ7_2
+Added Pin To Net: NetName=NetJ8_2 Pin=J8-2
+Added Pin To Net: NetName=NetJ8_2 Pin=K3-6
+Added Net: Name=NetJ8_2
+Added Pin To Net: NetName=NetJ9_2 Pin=J9-2
+Added Pin To Net: NetName=NetJ9_2 Pin=K4-3
+Added Net: Name=NetJ9_2
+Added Pin To Net: NetName=NetJ10_2 Pin=J10-2
+Added Pin To Net: NetName=NetJ10_2 Pin=K4-6
+Added Net: Name=NetJ10_2
+Added Pin To Net: NetName=NetK1_1 Pin=K1-1
+Added Pin To Net: NetName=NetK1_1 Pin=K2-1
+Added Pin To Net: NetName=NetK1_1 Pin=K3-1
+Added Pin To Net: NetName=NetK1_1 Pin=K4-1
+Added Pin To Net: NetName=NetK1_1 Pin=K5-1
+Added Pin To Net: NetName=NetK1_1 Pin=P1-1
+Added Net: Name=NetK1_1
+Added Pin To Net: NetName=NetK1_2 Pin=K1-2
+Added Pin To Net: NetName=NetK1_2 Pin=K2-2
+Added Pin To Net: NetName=NetK1_2 Pin=K3-2
+Added Pin To Net: NetName=NetK1_2 Pin=K4-2
+Added Pin To Net: NetName=NetK1_2 Pin=K5-2
+Added Pin To Net: NetName=NetK1_2 Pin=P1-2
+Added Net: Name=NetK1_2
+Added Pin To Net: NetName=NetK1_7 Pin=K1-7
+Added Pin To Net: NetName=NetK1_7 Pin=K2-7
+Added Pin To Net: NetName=NetK1_7 Pin=K3-7
+Added Pin To Net: NetName=NetK1_7 Pin=K4-7
+Added Pin To Net: NetName=NetK1_7 Pin=K5-7
+Added Pin To Net: NetName=NetK1_7 Pin=P1-7
+Added Net: Name=NetK1_7
+Added Pin To Net: NetName=NetK1_8 Pin=K1-8
+Added Pin To Net: NetName=NetK1_8 Pin=K2-8
+Added Pin To Net: NetName=NetK1_8 Pin=K3-8
+Added Pin To Net: NetName=NetK1_8 Pin=K4-8
+Added Pin To Net: NetName=NetK1_8 Pin=K5-8
+Added Pin To Net: NetName=NetK1_8 Pin=P1-8
+Added Net: Name=NetK1_8
+Added Pin To Net: NetName=NETLABEL249 Pin=P2-1
+Added Pin To Net: NetName=NETLABEL249 Pin=U1-5
+Added Net: Name=NETLABEL249
+Added Pin To Net: NetName=RX Pin=P2-2
+Added Pin To Net: NetName=RX Pin=U1-1
+Added Net: Name=RX
+Added Pin To Net: NetName=TX Pin=P2-4
+Added Pin To Net: NetName=TX Pin=U1-4
+Added Net: Name=TX
+Added Pin To Net: NetName=VCC Pin=P2-5
+Added Pin To Net: NetName=VCC Pin=U1-8
+Added Net: Name=VCC
+Added Class: Name=rj45_hub

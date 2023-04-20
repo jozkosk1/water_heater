@@ -1,0 +1,16 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: Temp_sensor_can.CSPcbDoc   15. 12. 2022  9:02:15
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : Temp_sensor_can.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        11.81mil (0.29997mm)     Round          37               5.04 Inch (127.99 mm)
+T2        35.43mil (0.89992mm)     Round          5                0.40 Inch (10.16 mm)
+T3        40mil (1.016mm)          Round          2                0.10 Inch (2.54 mm)
+---------------------------------------------------------------------------
+Totals                                            44               5.54 Inch (140.69 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

@@ -1,0 +1,9 @@
+Change Component Designator: OldDesignator=P3 NewDesignator=P5
+Change Component Designator: OldDesignator=R8 NewDesignator=R9
+Change Component Designator: OldDesignator=R9 NewDesignator=R8
+Added Component: Designator=P3(HDR2X2)
+Added Pin To Net: NetName=NetJ1_2 Pin=P3-1
+Added Pin To Net: NetName=+3V3 Pin=P3-2
+Added Pin To Net: NetName=SDA Pin=P3-3
+Added Pin To Net: NetName=GND Pin=P3-4
+Added Member To Class: ClassName=water_heater_02 Member=Component P5 Header 3

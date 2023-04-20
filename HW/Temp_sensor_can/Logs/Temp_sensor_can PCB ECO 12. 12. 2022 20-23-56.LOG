@@ -1,0 +1,102 @@
+Added Component: Designator=C1(0603C-GENERIC)
+Added Component: Designator=C2(0603C-GENERIC)
+Added Component: Designator=C3(0603C-GENERIC)
+Added Component: Designator=C4(0603C-GENERIC)
+Added Component: Designator=C5(0603C-GENERIC)
+Added Component: Designator=C6(0603C-GENERIC)
+Added Component: Designator=C7(0603C-GENERIC)
+Added Component: Designator=C8(0603C-GENERIC)
+Added Component: Designator=D1(LED-3MM-GREEN)
+Added Component: Designator=P1(HDR1X5)
+Added Component: Designator=R1(0603R-GENERIC)
+Added Component: Designator=R2(0603R-GENERIC)
+Added Component: Designator=R3(0603R-GENERIC)
+Added Component: Designator=R4(0603R-GENERIC)
+Added Component: Designator=R5(0603R-GENERIC)
+Added Component: Designator=U1(SO8)
+Added Component: Designator=U3(FP-SOT25-IPC_B)
+Added Component: Designator=U4(UFQFPN32_M)
+Added Pin To Net: NetName=+3V3 Pin=C4-2
+Added Pin To Net: NetName=+3V3 Pin=C6-1
+Added Pin To Net: NetName=+3V3 Pin=C7-1
+Added Pin To Net: NetName=+3V3 Pin=C8-1
+Added Pin To Net: NetName=+3V3 Pin=P1-1
+Added Pin To Net: NetName=+3V3 Pin=R1-2
+Added Pin To Net: NetName=+3V3 Pin=U1-5
+Added Pin To Net: NetName=+3V3 Pin=U4-1
+Added Pin To Net: NetName=+3V3 Pin=U4-5
+Added Pin To Net: NetName=+3V3 Pin=U4-17
+Added Net: Name=+3V3
+Added Pin To Net: NetName=+3V Pin=C5-2
+Added Pin To Net: NetName=+3V Pin=R4-2
+Added Pin To Net: NetName=+3V Pin=R5-2
+Added Net: Name=+3V
+Added Pin To Net: NetName=+5V Pin=C3-2
+Added Pin To Net: NetName=+5V Pin=U1-3
+Added Pin To Net: NetName=+5V Pin=U3-5
+Added Net: Name=+5V
+Added Pin To Net: NetName=+24V Pin=C1-2
+Added Pin To Net: NetName=+24V Pin=C2-2
+Added Pin To Net: NetName=+24V Pin=U3-1
+Added Pin To Net: NetName=+24V Pin=U3-3
+Added Net: Name=+24V
+Added Pin To Net: NetName=CAN_RX Pin=U1-4
+Added Pin To Net: NetName=CAN_RX Pin=U4-21
+Added Net: Name=CAN_RX
+Added Pin To Net: NetName=CAN_TX Pin=U1-1
+Added Pin To Net: NetName=CAN_TX Pin=U4-22
+Added Net: Name=CAN_TX
+Added Pin To Net: NetName=CANH Pin=R2-2
+Added Pin To Net: NetName=CANH Pin=U1-7
+Added Net: Name=CANH
+Added Pin To Net: NetName=CANL Pin=R2-1
+Added Pin To Net: NetName=CANL Pin=U1-6
+Added Net: Name=CANL
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=GND Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C6-2
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=GND Pin=C8-2
+Added Pin To Net: NetName=GND Pin=D1-K
+Added Pin To Net: NetName=GND Pin=P1-3
+Added Pin To Net: NetName=GND Pin=U1-2
+Added Pin To Net: NetName=GND Pin=U1-8
+Added Pin To Net: NetName=GND Pin=U3-2
+Added Pin To Net: NetName=GND Pin=U4-6
+Added Pin To Net: NetName=GND Pin=U4-16
+Added Pin To Net: NetName=GND Pin=U4-31
+Added Pin To Net: NetName=GND Pin=U4-32
+Added Pin To Net: NetName=GND Pin=U4-33
+Added Net: Name=GND
+Added Pin To Net: NetName=HEATER Pin=U4-14
+Added Net: Name=HEATER
+Added Pin To Net: NetName=NetD1_A Pin=D1-A
+Added Pin To Net: NetName=NetD1_A Pin=R3-1
+Added Net: Name=NetD1_A
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=NetR3_2 Pin=U4-8
+Added Net: Name=NetR3_2
+Added Pin To Net: NetName=NRST Pin=P1-5
+Added Pin To Net: NetName=NRST Pin=R1-1
+Added Pin To Net: NetName=NRST Pin=U4-4
+Added Net: Name=NRST
+Added Pin To Net: NetName=SCL Pin=R5-1
+Added Pin To Net: NetName=SCL Pin=U4-29
+Added Net: Name=SCL
+Added Pin To Net: NetName=SDA Pin=R4-1
+Added Pin To Net: NetName=SDA Pin=U4-30
+Added Net: Name=SDA
+Added Pin To Net: NetName=SENSOR Pin=U4-15
+Added Net: Name=SENSOR
+Added Pin To Net: NetName=SWCLK Pin=P1-2
+Added Pin To Net: NetName=SWCLK Pin=U4-24
+Added Net: Name=SWCLK
+Added Pin To Net: NetName=SWDIO Pin=P1-4
+Added Pin To Net: NetName=SWDIO Pin=U4-23
+Added Net: Name=SWDIO
+Added Pin To Net: NetName=UART1_TX Pin=U4-19
+Added Net: Name=UART1_TX
+Added Class: Name=Temp_sensor_can

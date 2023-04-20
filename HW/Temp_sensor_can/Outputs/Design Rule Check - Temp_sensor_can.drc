@@ -1,0 +1,91 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc
+Date     : 15. 12. 2022
+Time     : 9:01:25
+
+Processing Rule : Unpoured Polygon (Allow unpoured: False)
+Rule Violations :0
+
+Processing Rule : Unpoured Polygon (Allow unpoured: False)
+Rule Violations :0
+
+Processing Rule : Silk primitive without silk layer
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (2.3mm,-0.075mm)(17.7mm,-0.075mm)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (17.7mm,-16.45mm)(17.7mm,-0.075mm)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (2.3mm,-16.45mm)(17.7mm,-16.45mm)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (2.3mm,-16.45mm)(2.3mm,-0.075mm)  Top Overlay
+Rule Violations :4
+
+Processing Rule : Silk to Silk (Clearance=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0.127mm) (IsPad),(All)
+   Violation between Pad D1-A(17.9mm,5.8mm)  Multi-Layer and 
+                     Arc (17.9mm,4.53mm)  Top Overlay
+   Violation between Pad D1-K(17.9mm,3.26mm)  Multi-Layer and 
+                     Arc (17.9mm,4.53mm)  Top Overlay
+   Violation between Track (2.3mm,-0.075mm)(17.7mm,-0.075mm)  Top Overlay and 
+                     Pad K1-1(14.445mm,1.57mm)  Top Layer
+   Violation between Track (2.3mm,-0.075mm)(17.7mm,-0.075mm)  Top Overlay and 
+                     Pad K1-3(11.905mm,1.57mm)  Top Layer
+   Violation between Track (2.3mm,-0.075mm)(17.7mm,-0.075mm)  Top Overlay and 
+                     Pad K1-5(9.365mm,1.57mm)  Top Layer
+   Violation between Track (2.3mm,-0.075mm)(17.7mm,-0.075mm)  Top Overlay and 
+                     Pad K1-7(6.825mm,1.57mm)  Top Layer
+   Violation between Track (16.1mm,9.7mm)(16.1mm,10.8mm)  Top Overlay and 
+                     Pad U2-4(15.2mm,8.5mm)  Top Layer
+   Violation between Track (16.1mm,6.2mm)(16.1mm,7.3mm)  Top Overlay and 
+                     Pad U2-4(15.2mm,8.5mm)  Top Layer
+   Violation between Track (1.319mm,9.616mm)(3.884mm,9.616mm)  Top Overlay and 
+                     Pad U3-5(1.75mm,8.751mm)  Top Layer
+   Violation between Track (1.319mm,9.616mm)(3.884mm,9.616mm)  Top Overlay and 
+                     Pad U3-4(3.65mm,8.751mm)  Top Layer
+   Violation between Track (8.5mm,30.4mm)(11.5mm,30.4mm)  Top Overlay and 
+                     Pad U5-0(10mm,31.9mm)  Top Layer
+   Violation between Track (8.5mm,33.4mm)(11.5mm,33.4mm)  Top Overlay and 
+                     Pad U5-0(10mm,31.9mm)  Top Layer
+   Violation between Track (16.63mm,4.022mm)(17.9mm,4.022mm)  Top Overlay and 
+                     Pad D1-K(17.9mm,3.26mm)  Multi-Layer
+   Violation between Track (16.63mm,5.038mm)(17.9mm,4.022mm)  Top Overlay and 
+                     Pad D1-K(17.9mm,3.26mm)  Multi-Layer
+   Violation between Track (17.9mm,4.022mm)(19.17mm,4.022mm)  Top Overlay and 
+                     Pad D1-K(17.9mm,3.26mm)  Multi-Layer
+   Violation between Track (17.9mm,4.022mm)(19.17mm,5.038mm)  Top Overlay and 
+                     Pad D1-K(17.9mm,3.26mm)  Multi-Layer
+   Violation between Track (16.63mm,5.038mm)(19.17mm,5.038mm)  Top Overlay and 
+                     Pad D1-A(17.9mm,5.8mm)  Multi-Layer
+Rule Violations :17
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.25mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=1816.048mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.3mm) (Max=6.3mm) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=0.127mm) (All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=0.102mm) (Conductor Width=0.102mm) (Air Gap=0.102mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=1816.048mm) (Preferred=0.152mm) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.152mm) (All),(All)
+Rule Violations :0
+
+
+Violations Detected : 21
+Time Elapsed        : 00:00:00

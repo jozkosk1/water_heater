@@ -1,0 +1,20 @@
+Removed Member From Class: ClassName=Heater_element Member=P2
+Removed Member From Class: ClassName=Heater_element Member=R7
+Removed Member From Class: ClassName=Heater_element Member=R8
+Removed Member From Class: ClassName=Heater_element Member=R9
+Removed Member From Class: ClassName=Heater_element Member=R10
+Added Pin To Net: NetName=NetP1_1 Pin=P1-1
+Added Pin To Net: NetName=NetP1_1 Pin=R1-2
+Added Pin To Net: NetName=NetP1_1 Pin=R2-2
+Added Pin To Net: NetName=NetP1_1 Pin=R3-2
+Added Pin To Net: NetName=NetP1_1 Pin=R4-2
+Added Pin To Net: NetName=NetP1_1 Pin=R5-2
+Added Pin To Net: NetName=NetP1_1 Pin=R6-2
+Added Net: Name=NetP1_1
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_1 Pin=R2-1
+Added Pin To Net: NetName=NetR1_1 Pin=R3-1
+Added Pin To Net: NetName=NetR1_1 Pin=R4-1
+Added Pin To Net: NetName=NetR1_1 Pin=R5-1
+Added Pin To Net: NetName=NetR1_1 Pin=R6-1
+Added Net: Name=NetR1_1

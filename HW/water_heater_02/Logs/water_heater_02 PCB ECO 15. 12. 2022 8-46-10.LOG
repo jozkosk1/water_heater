@@ -1,0 +1,8 @@
+Added Component: Designator=R10(0603R-GENERIC)
+Added Component: Designator=R11(0603R-GENERIC)
+Added Pin To Net: NetName=NetJ1_2 Pin=R10-1
+Added Pin To Net: NetName=+3V3 Pin=R10-2
+Added Pin To Net: NetName=SDA Pin=R11-1
+Added Pin To Net: NetName=+3V3 Pin=R11-2
+Added Member To Class: ClassName=water_heater_02 Member=Component R10 Res2
+Added Member To Class: ClassName=water_heater_02 Member=Component R11 Res2

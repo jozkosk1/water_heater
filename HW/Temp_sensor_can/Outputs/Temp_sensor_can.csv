@@ -1,0 +1,14 @@
+Comment,Description,Designator,Footprint,LibRef,Quantity,Value
+
+"Cap","Capacitor","C1, C2, C3, C4, C5, C6, C7, C8","0603C-GENERIC","Cap","8","100n"
+"LED-RED-3MM","LED-GREEN-3MM","D1","LED-3MM-GREEN","LED-GREEN-3MM","1",""
+"RJ45","RJ45","K1","rj45 - edge","RJ45","1",""
+"SWD","Header, 5-Pin","P1","HDR1X5","Header 5","1",""
+"Res2","Resistor","R1","0603R-GENERIC","Res2","1","10k"
+"Res2","Resistor","R3","0603R-GENERIC","Res2","1","330"
+"Res2","Resistor","R4, R5","0603R-GENERIC","Res2","2","4k7"
+"MCP2542FD","","U1","SO8","MCP2542FD","1",""
+"AP2204RB","AP2204RB","U2","SOT-89","AP2204RB","1",""
+"TLV70233DBVR","IC REG LINEAR 3.3V 150MA SOT23-5","U3","FP-SOT25-IPC_B","CMP-12756-000010-1","1",""
+"STM32F302K8U6","ARM Cortex-M4 32-Bit MCU, 64 KB Flash, 16 KB SRAM, 24 I/Os, 2 to 3.6 V, -40 to 85 degC, 32-Pin UFQFPN, RoHS, Tray","U4","UFQFPN32_M","CMP-0011-00001-1","1",""
+"SI7051","SI7051","U5","DFN_6P","SI7051","1",""

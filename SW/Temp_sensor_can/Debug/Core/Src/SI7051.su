@@ -1,0 +1,2 @@
+SI7051.c:12:6:SI7051_start_conversion	32	static
+SI7051.c:20:9:SI7051_read_temperature	40	static

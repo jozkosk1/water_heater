@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Temp_sensor_can.PrjPcb]
+   Generated File[Temp_sensor_can.TXT]
+   Generated File[Temp_sensor_can.LDP]
+   Generated File[Temp_sensor_can.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 9:02:15 On 15. 12. 2022

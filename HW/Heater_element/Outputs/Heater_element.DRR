@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: Heater_element.CSPcbDoc   15. 12. 2022  8:59:02
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : Heater_element.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        137.8mil (3.50012mm)     Round          2         NPTH   0.66 Inch (16.80 mm)
+---------------------------------------------------------------------------
+Totals                                            2                0.66 Inch (16.80 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

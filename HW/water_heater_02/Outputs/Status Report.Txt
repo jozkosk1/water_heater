@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [water_heater_02.PrjPcb]
+   Generated File[water_heater_02.TXT]
+   Generated File[water_heater_02.LDP]
+   Generated File[water_heater_02.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 8:54:03 On 15. 12. 2022

@@ -1,0 +1,433 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #E2F2F8;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\CS\Templates\CircuitStudio_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">15. 12. 2022</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">9:01:25</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc" class="file"><acronym title="C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc">C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Errors:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">21</td></tr>
+</table>
+</td>
+</table><a name="IDWEQEMYFDYQFVBNOI3MN5SO50JNY0Q4J3KAIPPSDZIR0STZGA0NRF"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Errors</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRSECUURUII11GVQ0Q2KSRHLHSPAK4QYBLCH4HJBU4R50JRJGAOEF">Unpoured Polygon (Allow unpoured: False)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWFUGBDMTVQAQI5FVUVNDHPY2FJN2BBHAM4NGFOB4NL3323Z33BYM">Unpoured Polygon (Allow unpoured: False)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYBTD0N1AMY1LBOGUI3QOWN5ZEOI5TGPF2YVSVXBZ0AD43EXLIXE">Silk primitive without silk layer</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEM2ZYGL2I5KEIQW1Y2WFTSGHVICRLQIHZ5QJUUEJCVME5BU2GDFF">Silk to Silk (Clearance=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVVFLTSX3E50ECFL5AMUFZESLDDR20NNNWEZ0POIBVEXEN523B3EE">Silk To Solder Mask (Clearance=0.127mm) (IsPad),(All)</a></td>
+<td class="column2">17</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKDF4MQMMHYLOF2BQN2YQ14CRTNTD31K515X3FWMZOBZKZ210TJTI">Minimum Solder Mask Sliver (Gap=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0ESPJXBBTX20H4F2EG4BKWKGVKMMQPDZQFYNOZOL4RX5IQHIM11">Hole To Hole Clearance (Gap=0.25mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPOLWERS4CSMCPROG2ENL5WBVOPR4WTZWZSHYLYP3CD4PWL1TVZBM">Height Constraint (Min=0mm) (Max=1816.048mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0JVFHCT1OQVXJLCBUZB340NQ4BJDYNY1R4IJ0DHFLWLJG0OVQRUP">Hole Size Constraint (Min=0.3mm) (Max=6.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUA4LYNKB5DZ2MINRN2L3RDOCVHHW0A3I5SQNKIHSAG4J2E1KHLT">Minimum Annular Ring (Minimum=0.127mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDP2PMFOVHFCXKMTHUX44FVPEQXGRCGWUAOLL0F1MHGG55VKADZLTB">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJ2ZJNDBCZC05BXH2TXKEUW3SQK3ZNAVPQQVBF0B2Q10J04JQUVRK">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNTSO4CBRCXZ1H2XV5JT30UYE5GR0X0ZD3CLEN4LCCV1TFQECEZWF">Power Plane Connect Rule(Direct Connect )(Expansion=0.102mm) (Conductor Width=0.102mm) (Air Gap=0.102mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDXG0Z4ISQB4YIWG4DBWWACMGJCLT2PLL32OWYNBBLPGNCQHUAD0K">Width Constraint (Min=0.152mm) (Max=1816.048mm) (Preferred=0.152mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDSZW05UMJKR3YOQ5TAFQ01XRZEKPNGHAFKVOIMVOXQUMQ2JXFZNIL">Clearance Constraint (Gap=0.152mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">21</td>
+</tr>
+</table><br><a name="IDYBTD0N1AMY1LBOGUI3QOWN5ZEOI5TGPF2YVSVXBZ0AD43EXLIXE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk primitive without silk layer</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2905.585mil|Location2.X=3343.218mil|Location1.Y=1268.774mil|Location2.Y=1678.077mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2905.585mil|Location2.X=3343.218mil|Location1.Y=1268.774mil|Location2.Y=1678.077mil|Absolute=True">Silk To Board Region Clearance (Out of silkscreen region) : Track (2.3mm,-0.075mm)(17.7mm,-0.075mm)  Top Overlay</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3410.834mil|Location2.X=3444.268mil|Location1.Y=1148.531mil|Location2.Y=1153.634mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3410.834mil|Location2.X=3444.268mil|Location1.Y=1148.531mil|Location2.Y=1153.634mil|Absolute=True">Silk To Board Region Clearance (Out of silkscreen region) : Track (17.7mm,-16.45mm)(17.7mm,-0.075mm)  Top Overlay</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2905.585mil|Location2.X=3343.218mil|Location1.Y=624.089mil|Location2.Y=1033.392mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2905.585mil|Location2.X=3343.218mil|Location1.Y=624.089mil|Location2.Y=1033.392mil|Absolute=True">Silk To Board Region Clearance (Out of silkscreen region) : Track (2.3mm,-16.45mm)(17.7mm,-16.45mm)  Top Overlay</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2804.535mil|Location2.X=2837.968mil|Location1.Y=1148.531mil|Location2.Y=1153.634mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2804.535mil|Location2.X=2837.968mil|Location1.Y=1148.531mil|Location2.Y=1153.634mil|Absolute=True">Silk To Board Region Clearance (Out of silkscreen region) : Track (2.3mm,-16.45mm)(2.3mm,-0.075mm)  Top Overlay</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDVVFLTSX3E50ECFL5AMUFZESLDDR20NNNWEZ0POIBVEXEN523B3EE"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Silk To Solder Mask (Clearance=0.127mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.807mil|Location2.X=3456.713mil|Location1.Y=1669.272mil|Location2.Y=1740.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.807mil|Location2.X=3456.713mil|Location1.Y=1669.272mil|Location2.Y=1740.177mil|Absolute=True">Pad D1-A(17.9mm,5.8mm)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3360.205mil|Location2.X=3482.315mil|Location1.Y=1593.669mil|Location2.Y=1715.78mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3360.205mil|Location2.X=3482.315mil|Location1.Y=1593.669mil|Location2.Y=1715.78mil|Absolute=True">Arc (17.9mm,4.53mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.807mil|Location2.X=3456.713mil|Location1.Y=1569.272mil|Location2.Y=1640.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.807mil|Location2.X=3456.713mil|Location1.Y=1569.272mil|Location2.Y=1640.177mil|Absolute=True">Pad D1-K(17.9mm,3.26mm)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3360.205mil|Location2.X=3482.315mil|Location1.Y=1593.669mil|Location2.Y=1715.78mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3360.205mil|Location2.X=3482.315mil|Location1.Y=1593.669mil|Location2.Y=1715.78mil|Absolute=True">Arc (17.9mm,4.53mm)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2804.134mil|Location2.X=3416.338mil|Location1.Y=1470.473mil|Location2.Y=1476.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2804.134mil|Location2.X=3416.338mil|Location1.Y=1470.473mil|Location2.Y=1476.378mil|Absolute=True">Track (2.3mm,-0.075mm)(17.7mm,-0.075mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3252.283mil|Location2.X=3318.189mil|Location1.Y=1472.244mil|Location2.Y=1604.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3252.283mil|Location2.X=3318.189mil|Location1.Y=1472.244mil|Location2.Y=1604.134mil|Absolute=True">Pad K1-1(14.445mm,1.57mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2804.134mil|Location2.X=3416.338mil|Location1.Y=1470.473mil|Location2.Y=1476.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2804.134mil|Location2.X=3416.338mil|Location1.Y=1470.473mil|Location2.Y=1476.378mil|Absolute=True">Track (2.3mm,-0.075mm)(17.7mm,-0.075mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3152.283mil|Location2.X=3218.189mil|Location1.Y=1472.244mil|Location2.Y=1604.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3152.283mil|Location2.X=3218.189mil|Location1.Y=1472.244mil|Location2.Y=1604.134mil|Absolute=True">Pad K1-3(11.905mm,1.57mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2804.134mil|Location2.X=3416.338mil|Location1.Y=1470.473mil|Location2.Y=1476.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2804.134mil|Location2.X=3416.338mil|Location1.Y=1470.473mil|Location2.Y=1476.378mil|Absolute=True">Track (2.3mm,-0.075mm)(17.7mm,-0.075mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3052.283mil|Location2.X=3118.189mil|Location1.Y=1472.244mil|Location2.Y=1604.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3052.283mil|Location2.X=3118.189mil|Location1.Y=1472.244mil|Location2.Y=1604.134mil|Absolute=True">Pad K1-5(9.365mm,1.57mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2804.134mil|Location2.X=3416.338mil|Location1.Y=1470.473mil|Location2.Y=1476.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2804.134mil|Location2.X=3416.338mil|Location1.Y=1470.473mil|Location2.Y=1476.378mil|Absolute=True">Track (2.3mm,-0.075mm)(17.7mm,-0.075mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2952.283mil|Location2.X=3018.189mil|Location1.Y=1472.244mil|Location2.Y=1604.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2952.283mil|Location2.X=3018.189mil|Location1.Y=1472.244mil|Location2.Y=1604.134mil|Absolute=True">Pad K1-7(6.825mm,1.57mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3344.488mil|Location2.X=3356.299mil|Location1.Y=1852.362mil|Location2.Y=1907.48mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3344.488mil|Location2.X=3356.299mil|Location1.Y=1852.362mil|Location2.Y=1907.48mil|Absolute=True">Track (16.1mm,9.7mm)(16.1mm,10.8mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3250.492mil|Location2.X=3379.429mil|Location1.Y=1771.654mil|Location2.Y=1850.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3250.492mil|Location2.X=3379.429mil|Location1.Y=1771.654mil|Location2.Y=1850.394mil|Absolute=True">Pad U2-4(15.2mm,8.5mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3344.488mil|Location2.X=3356.299mil|Location1.Y=1714.567mil|Location2.Y=1769.685mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3344.488mil|Location2.X=3356.299mil|Location1.Y=1714.567mil|Location2.Y=1769.685mil|Absolute=True">Track (16.1mm,6.2mm)(16.1mm,7.3mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3250.492mil|Location2.X=3379.429mil|Location1.Y=1771.654mil|Location2.Y=1850.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3250.492mil|Location2.X=3379.429mil|Location1.Y=1771.654mil|Location2.Y=1850.394mil|Absolute=True">Pad U2-4(15.2mm,8.5mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2765.957mil|Location2.X=2871.957mil|Location1.Y=1852.453mil|Location2.Y=1857.453mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2765.957mil|Location2.X=2871.957mil|Location1.Y=1852.453mil|Location2.Y=1857.453mil|Absolute=True">Track (1.319mm,9.616mm)(3.884mm,9.616mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2774.098mil|Location2.X=2796.768mil|Location1.Y=1793.189mil|Location2.Y=1848.587mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2774.098mil|Location2.X=2796.768mil|Location1.Y=1793.189mil|Location2.Y=1848.587mil|Absolute=True">Pad U3-5(1.75mm,8.751mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2765.957mil|Location2.X=2871.957mil|Location1.Y=1852.453mil|Location2.Y=1857.453mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2765.957mil|Location2.X=2871.957mil|Location1.Y=1852.453mil|Location2.Y=1857.453mil|Absolute=True">Track (1.319mm,9.616mm)(3.884mm,9.616mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2848.901mil|Location2.X=2871.571mil|Location1.Y=1793.189mil|Location2.Y=1848.587mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2848.901mil|Location2.X=2871.571mil|Location1.Y=1793.189mil|Location2.Y=1848.587mil|Absolute=True">Pad U3-4(3.65mm,8.751mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3046.181mil|Location2.X=3174.291mil|Location1.Y=2668.228mil|Location2.Y=2678.228mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3046.181mil|Location2.X=3174.291mil|Location1.Y=2668.228mil|Location2.Y=2678.228mil|Absolute=True">Track (8.5mm,30.4mm)(11.5mm,30.4mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3075.787mil|Location2.X=3144.685mil|Location1.Y=2680.118mil|Location2.Y=2784.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3075.787mil|Location2.X=3144.685mil|Location1.Y=2680.118mil|Location2.Y=2784.449mil|Absolute=True">Pad U5-0(10mm,31.9mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3046.181mil|Location2.X=3174.291mil|Location1.Y=2786.339mil|Location2.Y=2796.339mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3046.181mil|Location2.X=3174.291mil|Location1.Y=2786.339mil|Location2.Y=2796.339mil|Absolute=True">Track (8.5mm,33.4mm)(11.5mm,33.4mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3075.787mil|Location2.X=3144.685mil|Location1.Y=2680.118mil|Location2.Y=2784.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3075.787mil|Location2.X=3144.685mil|Location1.Y=2680.118mil|Location2.Y=2784.449mil|Absolute=True">Pad U5-0(10mm,31.9mm)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3369.26mil|Location2.X=3423.26mil|Location1.Y=1632.725mil|Location2.Y=1636.725mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3369.26mil|Location2.X=3423.26mil|Location1.Y=1632.725mil|Location2.Y=1636.725mil|Absolute=True">Track (16.63mm,4.022mm)(17.9mm,4.022mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.807mil|Location2.X=3456.713mil|Location1.Y=1569.272mil|Location2.Y=1640.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.807mil|Location2.X=3456.713mil|Location1.Y=1569.272mil|Location2.Y=1640.177mil|Absolute=True">Pad D1-K(17.9mm,3.26mm)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3369.26mil|Location2.X=3423.26mil|Location1.Y=1632.725mil|Location2.Y=1676.725mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3369.26mil|Location2.X=3423.26mil|Location1.Y=1632.725mil|Location2.Y=1676.725mil|Absolute=True">Track (16.63mm,5.038mm)(17.9mm,4.022mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.807mil|Location2.X=3456.713mil|Location1.Y=1569.272mil|Location2.Y=1640.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.807mil|Location2.X=3456.713mil|Location1.Y=1569.272mil|Location2.Y=1640.177mil|Absolute=True">Pad D1-K(17.9mm,3.26mm)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3419.26mil|Location2.X=3473.26mil|Location1.Y=1632.725mil|Location2.Y=1636.725mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3419.26mil|Location2.X=3473.26mil|Location1.Y=1632.725mil|Location2.Y=1636.725mil|Absolute=True">Track (17.9mm,4.022mm)(19.17mm,4.022mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.807mil|Location2.X=3456.713mil|Location1.Y=1569.272mil|Location2.Y=1640.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.807mil|Location2.X=3456.713mil|Location1.Y=1569.272mil|Location2.Y=1640.177mil|Absolute=True">Pad D1-K(17.9mm,3.26mm)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3419.26mil|Location2.X=3473.26mil|Location1.Y=1632.725mil|Location2.Y=1676.725mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3419.26mil|Location2.X=3473.26mil|Location1.Y=1632.725mil|Location2.Y=1676.725mil|Absolute=True">Track (17.9mm,4.022mm)(19.17mm,5.038mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.807mil|Location2.X=3456.713mil|Location1.Y=1569.272mil|Location2.Y=1640.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.807mil|Location2.X=3456.713mil|Location1.Y=1569.272mil|Location2.Y=1640.177mil|Absolute=True">Pad D1-K(17.9mm,3.26mm)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3369.26mil|Location2.X=3473.26mil|Location1.Y=1672.725mil|Location2.Y=1676.725mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3369.26mil|Location2.X=3473.26mil|Location1.Y=1672.725mil|Location2.Y=1676.725mil|Absolute=True">Track (16.63mm,5.038mm)(19.17mm,5.038mm)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.807mil|Location2.X=3456.713mil|Location1.Y=1669.272mil|Location2.Y=1740.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jozo\Disk Google\Projekty\Kralikaren\Vyrobne_podklady-elektronika\Temp_sensor_can\Temp_sensor_can.CSPcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3385.807mil|Location2.X=3456.713mil|Location1.Y=1669.272mil|Location2.Y=1740.177mil|Absolute=True">Pad D1-A(17.9mm,5.8mm)  Multi-Layer</acronym></a></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

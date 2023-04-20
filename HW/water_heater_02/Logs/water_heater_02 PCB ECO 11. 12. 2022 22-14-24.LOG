@@ -1,0 +1,18 @@
+Added Component: Designator=S1(DIP-8)
+Added Pin To Net: NetName=GND Pin=S1-1
+Added Pin To Net: NetName=GND Pin=S1-2
+Added Pin To Net: NetName=GND Pin=S1-3
+Added Pin To Net: NetName=GND Pin=S1-4
+Added Pin To Net: NetName=NetS1_5 Pin=S1-5
+Added Pin To Net: NetName=NetS1_5 Pin=U4-12
+Added Net: Name=NetS1_5
+Added Pin To Net: NetName=NetS1_6 Pin=S1-6
+Added Pin To Net: NetName=NetS1_6 Pin=U4-11
+Added Net: Name=NetS1_6
+Added Pin To Net: NetName=NetS1_7 Pin=S1-7
+Added Pin To Net: NetName=NetS1_7 Pin=U4-10
+Added Net: Name=NetS1_7
+Added Pin To Net: NetName=NetS1_8 Pin=S1-8
+Added Pin To Net: NetName=NetS1_8 Pin=U4-9
+Added Net: Name=NetS1_8
+Added Member To Class: ClassName=water_heater_02 Member=Component S1 SW-DIP4

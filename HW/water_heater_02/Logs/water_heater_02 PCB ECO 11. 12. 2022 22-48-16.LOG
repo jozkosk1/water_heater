@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=NetS1_8 Pin=U4-9
+Removed Pin From Net: NetName=NetS1_7 Pin=U4-10
+Removed Pin From Net: NetName=NetS1_6 Pin=U4-11
+Removed Pin From Net: NetName=NetS1_5 Pin=U4-12
+Added Pin To Net: NetName=NetS1_5 Pin=U4-9
+Added Pin To Net: NetName=NetS1_6 Pin=U4-10
+Added Pin To Net: NetName=NetS1_7 Pin=U4-11
+Added Pin To Net: NetName=NetS1_8 Pin=U4-12
+Added Member To Class: ClassName=water_heater_02 Member=Component S1 SW-DIP4

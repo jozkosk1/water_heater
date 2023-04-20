@@ -1,0 +1,20 @@
+Added Component: Designator=R1(R2512)
+Added Component: Designator=R2(R2512)
+Added Component: Designator=R3(R2512)
+Added Component: Designator=R4(R2512)
+Added Component: Designator=R5(R2512)
+Added Component: Designator=R6(R2512)
+Added Component: Designator=R7(R2512)
+Added Component: Designator=R8(R2512)
+Added Component: Designator=R9(R2512)
+Added Component: Designator=R10(R2512)
+Added Member To Class: ClassName=Heater_element Member=Component R1 WF25P3R9JTL WALSIN
+Added Member To Class: ClassName=Heater_element Member=Component R2 WF25P3R9JTL WALSIN
+Added Member To Class: ClassName=Heater_element Member=Component R3 WF25P3R9JTL WALSIN
+Added Member To Class: ClassName=Heater_element Member=Component R4 WF25P3R9JTL WALSIN
+Added Member To Class: ClassName=Heater_element Member=Component R5 WF25P3R9JTL WALSIN
+Added Member To Class: ClassName=Heater_element Member=Component R6 WF25P3R9JTL WALSIN
+Added Member To Class: ClassName=Heater_element Member=Component R7 WF25P3R9JTL WALSIN
+Added Member To Class: ClassName=Heater_element Member=Component R8 WF25P3R9JTL WALSIN
+Added Member To Class: ClassName=Heater_element Member=Component R9 WF25P3R9JTL WALSIN
+Added Member To Class: ClassName=Heater_element Member=Component R10 WF25P3R9JTL WALSIN

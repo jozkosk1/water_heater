@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=NRST Pin=SW1-1
+Removed Pin From Net: NetName=NRST Pin=SW1-1
+Removed Pin From Net: NetName=GND Pin=SW1-2
+Removed Pin From Net: NetName=GND Pin=SW1-2
+Removed Member From Class: ClassName=Temp_sensor_can Member=SW1

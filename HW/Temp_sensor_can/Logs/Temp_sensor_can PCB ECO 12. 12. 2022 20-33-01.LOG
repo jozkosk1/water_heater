@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=CANL Pin=R2-1
+Removed Pin From Net: NetName=CANH Pin=R2-2
+Removed Member From Class: ClassName=Temp_sensor_can Member=R2

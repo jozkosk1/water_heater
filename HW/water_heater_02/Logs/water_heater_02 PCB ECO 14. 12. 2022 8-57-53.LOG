@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=+3V3 Pin=P5-1
+Removed Pin From Net: NetName=NetJ1_2 Pin=P5-2
+Removed Pin From Net: NetName=SDA Pin=P5-3
+Removed Pin From Net: NetName=GND Pin=P5-4
+Removed Member From Class: ClassName=water_heater_02 Member=P5
